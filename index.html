@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Files</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+    <h1>Download Experiment Files</h1>
+
+    <!-- Expt-1 -->
+    <h2>Expt-1</h2>
+    <ul>
+        <li><a href="Ch2_book.ipynb.txt" download>Download Ch2_book.ipynb.txt</a></li>
+    </ul>
+
+    <!-- Expt-2 -->
+    <h2>Expt-2</h2>
+    <button onclick="downloadExpt2()">Download All Expt-2 Files (ZIP)</button>
+
+    <script>
+        function downloadExpt2() {
+            var zip = new JSZip();
+            var files = [
+                { url: "Ch3_book.ipynb.txt", name: "Ch3_book.ipynb.txt" },
+                { url: "GridBoard.py", name: "GridBoard.py" },
+                { url: "Gridworld.py", name: "Gridworld.py" }
+            ];
+
+            // Fetch all files and add them to the zip
+            var promises = files.map(function(file) {
+                return fetch(file.url)
+                    .then(function(response) {
+                        return response.blob();
+                    })
+                    .then(function(blob) {
+                        zip.file(file.name, blob);
+                    });
+            });
+
+            // When all files are fetched, generate the zip and download
+            Promise.all(promises).then(function() {
+                zip.generateAsync({ type: "blob" }).then(function(content) {
+                    saveAs(content, "expt2_files.zip");
+                });
+            });
+        }
+    </script>
+</body>
+</html>
