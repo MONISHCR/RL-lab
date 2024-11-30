@@ -8,6 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
     <!-- Custom CSS -->
     <style>
         body {
@@ -70,7 +73,14 @@
     <div class="container">
         <h1 class="text-center mb-4">RL-LAB Files CSM</h1>
         <p class="text-center">Easily download experiment files with a single click. </p>
-        
+
+        <!-- Instruction Icon -->
+        <div class="text-center mb-4">
+            <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#instructionModal">
+                <i class="fas fa-question-circle"></i> Instructions
+            </button>
+        </div>
+
         <!-- Experiment 1 -->
         <div class="card my-4 p-4">
             <h2 class="card-title">Experiment 1</h2>
@@ -115,13 +125,60 @@
             <!-- Google Form Button for Experiment 5 -->
             <a href="https://forms.gle/ZLa85oYdyqWEnF5f7" target="_blank" class="btn btn-form">Fill Google Form for Expt-5(CSM-A)</a>
         </div>
-       
+
+        <!-- Experiment 6 -->
+        <div class="card my-4 p-4">
+            <h2 class="card-title">Experiment 6</h2>
+            <p class="card-text">Download the files related to Experiment 6 below:</p>
+            <a href="Experiment-6.ipynb" download class="btn btn-download">Download Expt-6</a>
+            <!-- Google Form Button for Experiment 6 -->
+            <a href="https://forms.gle/FXSgtJZ4Jsxy6E12A" target="_blank" class="btn btn-form">Fill Google Form for Expt-6(CSM-A)</a>
+        </div>
+
     </div>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Experiment Downloads. Designed with ❤️ by <a href="#">Monish</a>.</p>
     </footer>
+
+    <!-- Instruction Modal -->
+    <div class="modal fade" id="instructionModal" tabindex="-1" aria-labelledby="instructionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="instructionModalLabel">Download and Upload Instructions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>How to Download Files in Google Colab</h6>
+                    <ol>
+                        <li>Click on the respective "Download" button for the experiment.</li>
+                        <li>The file will automatically start downloading to your computer.</li>
+                    </ol>
+
+                    <h6>How to Upload Files in Google Colab</h6>
+                    <ol>
+                        <li>Go to your Google Colab notebook.</li>
+                        <li>Click on the "Files" icon on the left sidebar.</li>
+                        <li>Click the "Upload" button and select the file you want to upload.</li>
+                    </ol>
+
+                    <h6>How to Change Your Roll Number</h6>
+                    <ol>
+                        <li>Find the variable named <code>roll_number</code> in your code.</li>
+                        <li>Change the value to your new roll number: <strong>21BD1A66XX-RL-EXPT-XX</strong>.</li>
+                    </ol>
+
+                    <h6>Sharing Your Colab File</h6>
+                    <p>Make sure that your Google Colab file's sharing settings are set to "Anyone with the link can view", not "Restricted".</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
