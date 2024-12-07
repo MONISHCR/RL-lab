@@ -129,14 +129,50 @@
             <a href="https://forms.gle/DvP3je5f32Te3C1m6" target="_blank" class="btn btn-form">Fill Google Form for Expt-1(CSM-A)</a>
         </div>
 
-        <!-- Experiment 2 -->
-        <div class="card my-4 p-4">
-            <h2 class="card-title">Experiment 2</h2>
-            <p class="card-text">Download all files related to Experiment 2 as a single ZIP file.</p>
-            <a href="Experiment-2.zip" download class="btn btn-download">Download All Expt-2 Files (ZIP)</a>
-            <!-- Google Form Button for Experiment 2 -->
-            <a href="https://forms.gle/vP2mANMdwLPcrUTn9" target="_blank" class="btn btn-form">Fill Google Form for Expt-2(CSM-A)</a>
+       <!-- Experiment 2 -->
+<div class="card my-4 p-4">
+    <h2 class="card-title">Experiment 2</h2>
+    <p class="card-text">Download all files related to Experiment 2 as a single ZIP file. Please follow the instructions below for setup:</p>
+    <a href="Experiment-2.zip" download class="btn btn-download">Download All Expt-2 Files (ZIP)</a>
+    
+    <!-- Google Form Button for Experiment 2 -->
+    <a href="https://forms.gle/vP2mANMdwLPcrUTn9" target="_blank" class="btn btn-form">Fill Google Form for Expt-2(CSM-A)</a>
+    
+    <!-- Instruction Button for Experiment 2 -->
+    <button class="btn btn-info mt-3" data-bs-toggle="modal" data-bs-target="#instructionModal">
+        <i class="fas fa-question-circle"></i> Instructions for Expt-2
+    </button>
+</div>
+
+<!-- Modal for Experiment 2 Instructions -->
+<div class="modal fade" id="instructionModal" tabindex="-1" aria-labelledby="instructionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="instructionModalLabel">Experiment 2 Setup Instructions</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>How to Setup Experiment 2 in Google Colab:</h6>
+                <ol>
+                    <li>Download the ZIP file by clicking the "Download All Expt-2 Files (ZIP)" button.</li>
+                    <li>Unzip the folder on your computer to access the contents.</li>
+                    <li>Open your Google Colab notebook.</li>
+                    <li>Upload the <code>.ipynb</code> file(s) from the unzipped folder to your Colab environment by clicking the "Upload" button in the left sidebar (Files icon).</li>
+                    <li>Next, upload the two <code>.py</code> files to the runtime environment in Colab.</li>
+                    <li>To upload the Python files, click on the "Files" icon in Google Colab's sidebar, then select the files from your computer and drag them into the Colab file area.</li>
+                    <li>Ensure that the Python files are accessible within your Colab environment for seamless execution.</li>
+                </ol>
+                <h6>Note:</h6>
+                <p>Once uploaded, make sure to execute the code cells in the correct order to run the experiment smoothly.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
         </div>
+    </div>
+</div>
+
 
         <!-- Experiment 3 -->
         <div class="card my-4 p-4">
